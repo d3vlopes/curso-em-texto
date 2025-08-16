@@ -14,6 +14,20 @@
     "test": "turbo run test"
   },
   "packageManager": "npm@8.5.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "onFail": "error"
+    },
+    "runtime": {
+      "name": "node",
+      "version": ">=20",
+      "onFail": "error"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
