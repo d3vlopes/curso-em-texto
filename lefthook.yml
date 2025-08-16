@@ -1,0 +1,22 @@
+# pre-commit:
+#   parallel: true
+#   commands:
+#     eslint:
+#       run: npx turbo run lint --filter=...[HEAD]
+#     prettier:
+#       run: npx turbo run format --filter=...[HEAD]
+#     test:
+#       run: npx turbo run test --filter=...[HEAD]
+
+commit-msg:
+  commands:
+    lint-commit-msg:
+      run: npx commitlint --edit $1
+# pre-push:
+#   parallel: true
+#   commands:
+#     test:
+#       run: npx turbo run test:ci --filter=...
+
+#     packages-audit:
+#       run: npm audit --filter=...
