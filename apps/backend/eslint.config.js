@@ -3,6 +3,9 @@ import baseConfig from '../../eslint.config.js';
 export default [
   ...baseConfig,
   {
+    ignore: ['drizzle.config.ts'],
+  },
+  {
     files: ['**/*.ts'],
     languageOptions: {
       parserOptions: {
@@ -10,7 +13,7 @@ export default [
       },
     },
     rules: {
-      'no-undef': 'off'
+      'no-undef': 'off',
     },
   },
 ];
