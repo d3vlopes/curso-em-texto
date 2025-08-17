@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx watch src/app/index.ts",
     "build": "tsup src/app/index.ts --format esm,cjs --dts",
-    "start": "node dist/app/index.js"
+    "start": "node dist/app/index.js",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
