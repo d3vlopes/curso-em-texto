@@ -16,6 +16,7 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@types/pg": "^8.15.5",
     "dotenv": "^17.2.1",
     "drizzle-orm": "^0.44.4",
     "pg": "^8.16.3",
