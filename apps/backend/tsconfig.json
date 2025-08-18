@@ -6,15 +6,16 @@
     "rootDir": ".",
     "baseUrl": ".",
     "outDir": "dist",
-    "rootDirs": ["src",],
+    "rootDirs": ["src"],
     "strict": true,
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "types": ["node"],
+    "types": ["node", "vitest/globals"],
     "paths": {
       "@/*": ["./src/*"],
+      "@/__tests__/*": ["./src/__tests__/*"]
     }
   },
   "include": ["src"],
