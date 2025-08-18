@@ -3,7 +3,7 @@ import baseConfig from '../../eslint.config.js';
 export default [
   ...baseConfig,
   {
-    ignore: ['drizzle.config.ts'],
+    ignores: ['*.config.{js,ts}', 'drizzle/*'],
   },
   {
     files: ['**/*.ts'],

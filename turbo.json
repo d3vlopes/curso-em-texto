@@ -10,7 +10,15 @@
       "outputs": ["dist/**", ".next/**"]
     },
     "test": {
-      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "test:staged": {
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "format": {
       "outputs": []
     }
   }
