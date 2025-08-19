@@ -15,6 +15,9 @@
     "test:staged": {
       "outputs": []
     },
+    "test:ci": {
+      "outputs": []
+    },
     "lint": {
       "outputs": []
     },
