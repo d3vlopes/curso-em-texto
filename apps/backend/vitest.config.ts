@@ -10,6 +10,12 @@ export default mergeConfig(
     test: {
       environment: 'node',
       exclude: ['./src/__tests__/**'],
+      coverage: {
+        include: [
+          'src/presentation/controllers/**',
+          'src/services/useCases/**',
+        ],
+      },
     },
   })
 );
