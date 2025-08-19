@@ -8,7 +8,7 @@
     "build": "tsup src/app/index.ts --format esm,cjs --dts",
     "start": "node dist/app/index.js",
     "lint": "eslint .",
-    "format": "prettier --write .",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
     "db:generate": "npx drizzle-kit generate",
     "db:migrate": "npx drizzle-kit migrate",
     "db:studio": "npx drizzle-kit studio",
