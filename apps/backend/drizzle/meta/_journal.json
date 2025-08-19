@@ -15,6 +15,13 @@
       "when": 1755470348826,
       "tag": "0001_faithful_gambit",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1755645428436,
+      "tag": "0002_skinny_supreme_intelligence",
+      "breakpoints": true
     }
   ]
 }
