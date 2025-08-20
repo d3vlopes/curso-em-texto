@@ -15,7 +15,8 @@
     "test": "vitest --run --silent",
     "test:unit": "vitest --watch",
     "test:staged": "vitest related --run",
-    "test:ci": "vitest --run --coverage"
+    "test:ci": "vitest --run --coverage",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "keywords": [],
   "author": "",

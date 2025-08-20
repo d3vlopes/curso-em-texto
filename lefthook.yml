@@ -20,5 +20,8 @@ pre-push:
     test:
       run: npx turbo run test:ci --filter=...[origin/main]
 
+    typecheck:
+      run: npx turbo run typecheck --filter=...[origin/main]
+
     packages-audit:
       run: npm audit
