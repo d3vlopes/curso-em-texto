@@ -10,7 +10,21 @@
       "outputs": ["dist/**", ".next/**"]
     },
     "test": {
-      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "test:staged": {
+      "outputs": []
+    },
+    "test:ci": {
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
+    "typecheck": {
       "outputs": []
     }
   }
