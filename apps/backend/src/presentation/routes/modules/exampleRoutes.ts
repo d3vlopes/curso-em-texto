@@ -36,14 +36,14 @@ export const exampleRoutes: FastifyPluginAsync = async (app) => {
             description: 'Bad request',
             type: 'object',
             properties: {
-              message: { type: 'string' },
+              error: { type: 'string' },
             },
           },
           500: {
             description: 'Internal server error',
             type: 'object',
             properties: {
-              message: { type: 'string' },
+              error: { type: 'string' },
             },
           },
         },
