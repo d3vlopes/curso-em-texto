@@ -22,8 +22,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "prettier": "@curso-em-texto/prettier-config",
   "devDependencies": {
     "@curso-em-texto/eslint-config": "*",
+    "@curso-em-texto/prettier-config": "*",
     "@types/node": "^24.3.0",
     "@types/pg": "^8.15.5",
     "@vitest/coverage-istanbul": "^3.2.4",
