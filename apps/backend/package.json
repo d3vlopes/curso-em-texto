@@ -23,6 +23,7 @@
   "license": "ISC",
   "description": "",
   "prettier": "@curso-em-texto/prettier-config",
+  "packageManager": "npm@8.5.0",
   "devDependencies": {
     "@curso-em-texto/eslint-config": "*",
     "@curso-em-texto/prettier-config": "*",
