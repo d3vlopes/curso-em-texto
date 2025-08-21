@@ -1,0 +1,10 @@
+{
+  "name": "@curso-em-texto/prettier-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "packageManager": "npm@8.5.0",
+  "peerDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
