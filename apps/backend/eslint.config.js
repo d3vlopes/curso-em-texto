@@ -1,9 +1,9 @@
-import baseConfig from '../../eslint.config.js';
+import baseConfig from '@curso-em-texto/eslint-config';
 
 export default [
   ...baseConfig,
   {
-    ignores: ['*.config.{js,ts}', 'drizzle/*'],
+    ignores: ['*.config.{js,ts}'],
   },
   {
     files: ['**/*.ts'],
