@@ -41,14 +41,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@testing-library/jest-dom": "^6.7.0",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@vitest/ui": "^3.2.4",
-    "jsdom": "^26.1.0",
     "lefthook": "^1.12.3",
     "prettier": "^3.6.2",
-    "turbo": "^2.5.6",
-    "vitest": "^3.2.4"
+    "turbo": "^2.5.6"
   }
 }
