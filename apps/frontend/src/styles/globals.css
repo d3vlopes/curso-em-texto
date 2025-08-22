@@ -9,11 +9,36 @@
   --font-inter: var(--font-inter-sans);
 }
 
+@theme {
+  --color-primary: linear-gradient(102.72deg, #3C83F6 0%, #10B77F 100%);
+  --color-secondary: #F59E0B;
+
+  --color-background-500: #121212;
+  --color-background-400: #1A1A1A;
+  --color-background-300: #1F1F1F;
+  --color-background-200: #2E2E2E;
+
+  --color-gray-200: #A9AAAA;
+  --color-gray-100: #D4D2D2;
+  --color-gray-50: #F8FAFC;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+.bg-gradient-primary {
+  background-image: var(--color-primary);
+}
+
+.text-gradient-primary {
+  background-image: var(--color-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 body {
