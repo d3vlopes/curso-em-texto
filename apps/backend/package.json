@@ -14,7 +14,7 @@
     "db:studio": "npx drizzle-kit studio",
     "test": "vitest --run --silent",
     "test:unit": "vitest --watch",
-    "test:staged": "vitest related --run",
+    "test:staged": "vitest related ./src/services/useCases/**/**/*.test.ts ./src/controllers/**/**/*.test.ts  --run",
     "test:ci": "vitest --run --coverage",
     "vitest:ui": "vitest --ui",
     "typecheck": "tsc --project tsconfig.json --noEmit"
