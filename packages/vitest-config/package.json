@@ -1,0 +1,11 @@
+{
+  "name": "@curso-em-texto/vitest-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "peerDependencies": {
+    "vitest": "^3.2.4",
+    "@vitest/coverage-istanbul": "^3.2.4",
+    "@vitest/ui": "^3.2.4"
+  }
+}
