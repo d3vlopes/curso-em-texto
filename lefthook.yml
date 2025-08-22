@@ -2,11 +2,10 @@ pre-commit:
   parallel: true
   commands:
     linter:
-      run: npx turbo run lint --filter=...[HEAD]
+      run: npx turbo run lint --output-logs=errors-only --filter=...[HEAD]
     format:
-      run: npx turbo run format --filter=...[HEAD]
+      run: npx turbo run format --output-logs=errors-only --filter=...[HEAD]
     test:
-      glob: '*.{js,ts}'
       run: npx turbo run test:staged --filter=...[HEAD]
 
 commit-msg:
