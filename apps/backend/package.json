@@ -7,7 +7,7 @@
     "dev": "tsx watch src/app/index.ts",
     "build": "tsup src/app/index.ts --format esm,cjs --dts",
     "start": "node dist/app/index.js",
-    "lint": "eslint .",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "db:generate": "npx drizzle-kit generate",
     "db:migrate": "npx drizzle-kit migrate",
