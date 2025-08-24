@@ -1,4 +1,21 @@
+# Git
 .git
+.gitignore
+
+# Node
 node_modules
 npm-debug.log
-.env
+
+# Monorepo specific
+apps/*/node_modules
+packages/*/node_modules
+dist
+.next
+
+# Env files
+.env*
+!/.env.example
+
+# IDE configs
+.vscode
+.idea
