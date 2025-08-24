@@ -3,6 +3,3 @@ node_modules
 .env
 .qodo
 coverage
-.next
-next-env.d.ts
-tsconfig.tsbuildinfo
