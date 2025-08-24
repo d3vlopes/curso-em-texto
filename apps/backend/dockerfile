@@ -1,26 +1,28 @@
+# ---- STAGE 1: Build ----
 FROM node:22-slim AS builder
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
-COPY apps/backend/package.json ./apps/backend/
+COPY ../../package.json ../../package-lock.json* ./
+COPY ../../packages ./packages
+COPY . .
 
 RUN npm install
 
-COPY . .
-
 RUN npm run build --workspace=backend
 
-RUN npm prune --production
+# Mantém apenas deps de produção do backend
+RUN npm prune --production --workspace=backend
 
+# ---- STAGE 2: Runtime ----
 FROM node:22-slim
 WORKDIR /app
 
+# Copia node_modules e build do backend
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/apps/backend/dist ./dist
 COPY --from=builder /app/apps/backend/package.json ./package.json
 
 USER node
-
 EXPOSE 3000
 
-CMD [ "node", "dist/app/index.js" ]
+CMD ["node", "dist/index.js"]
