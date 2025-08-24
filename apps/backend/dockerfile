@@ -5,10 +5,6 @@ COPY package.json package-lock.json* ./
 COPY apps/backend/package.json ./apps/backend/
 COPY apps/frontend/package.json ./apps/frontend/
 
-COPY packages/eslint-config/package.json ./packages/eslint-config/
-COPY packages/prettier-config/package.json ./packages/prettier-config/
-# COPY packages/vitest-config/package.json ./packages/vitest-config/
-
 RUN npm install
 
 COPY . .
