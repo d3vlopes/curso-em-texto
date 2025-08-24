@@ -1,0 +1,45 @@
+name: Deploy Backend Koyeb
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  migrate:
+    name: Run Drizzle Migrations
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/backend
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run migrations
+        run: npm run db:migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+  deploy:
+    name: Deploy to Koyeb
+    runs-on: ubuntu-latest
+    needs: migrate
+    steps:
+      - name: Deploy to Koyeb
+        uses: koyeb/koyeb-deploy-action@v1
+        with:
+          app-name: api-curso-em-texto
+          service-name: backend
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          koyeb-api-token: ${{ secrets.KOYEB_API_TOKEN }}

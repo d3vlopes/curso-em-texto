@@ -21,7 +21,7 @@
   },
   "packageManager": "npm@8.5.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "devEngines": {
     "packageManager": {
@@ -30,7 +30,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": ">=20",
+      "version": ">=22",
       "onFail": "error"
     }
   },
