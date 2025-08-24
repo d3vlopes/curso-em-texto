@@ -1,5 +1,6 @@
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import storybook from 'eslint-plugin-storybook';
 import { FlatCompat } from '@eslint/eslintrc';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -55,6 +56,7 @@ const eslintConfig = [
       ],
     },
   },
+  ...storybook.configs['flat/recommended'],
 ];
 
 export default eslintConfig;
