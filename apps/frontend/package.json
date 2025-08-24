@@ -13,7 +13,7 @@
     "build-storybook": "storybook build",
     "test": "vitest run --silent",
     "test:unit": "vitest --watch",
-    "test:staged": "vitest related ./src/components/**/*.test.tsx /src/hooks/**/*.test.ts --run",
+    "test:staged": "vitest related ./src/components/**/*.test.tsx ./src/hooks/**/*.test.ts --run",
     "test:ci": "vitest --run --coverage"
   },
   "prettier": "@curso-em-texto/prettier-config",
