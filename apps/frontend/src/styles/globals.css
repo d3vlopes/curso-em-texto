@@ -18,6 +18,7 @@
   --color-background-300: #1F1F1F;
   --color-background-200: #2E2E2E;
 
+  --color-gray-*: initial;
   --color-gray-200: #A9AAAA;
   --color-gray-100: #D4D2D2;
   --color-gray-50: #F8FAFC;
@@ -44,6 +45,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-inter);
 }
 
 html {
@@ -52,6 +54,7 @@ html {
 
 button {
 	border: none;
+  cursor: pointer;
 }
 
 img {

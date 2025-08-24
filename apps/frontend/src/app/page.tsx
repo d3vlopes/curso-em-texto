@@ -1,3 +1,8 @@
+import { ExampleTemplate } from '@/templates/ExampleTemplate';
+import { exampleTemplateMock } from '@/templates/ExampleTemplate/ExampleTemplate.mock';
+
 export default function Home() {
-  return <div className="font-inter">Hello World</div>;
+  const exampleData = exampleTemplateMock;
+
+  return <ExampleTemplate {...exampleData} />;
 }

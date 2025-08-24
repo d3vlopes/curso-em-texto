@@ -15,7 +15,7 @@ export default mergeConfig(
       setupFiles: './vitest.setup.ts',
       coverage: {
         ...baseConfig.test.coverage,
-        include: ['src/components/**'],
+        include: ['src/components/**', 'src/hooks/*', 'src/templates/**'],
         exclude: [
           'src/components/**/*.stories.tsx',
           'src/components/**/*.mock.ts',
