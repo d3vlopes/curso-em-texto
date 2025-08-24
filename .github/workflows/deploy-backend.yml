@@ -1,4 +1,4 @@
-name: Deploy Backend Koyeb
+name: Deploy Backend
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Run migrations
-        run: npm run db:migrate
+        run: NODE_ENV=production npm run db:migrate
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
@@ -37,9 +37,9 @@ jobs:
     needs: migrate
     steps:
       - name: Deploy to Koyeb
-        uses: koyeb/koyeb-deploy-action@v1
+        uses: koyeb/koyeb-deploy-action@v2
         with:
           app-name: api-curso-em-texto
-          service-name: backend
+          service-name: api-curso-em-texto
           github-token: ${{ secrets.GITHUB_TOKEN }}
           koyeb-api-token: ${{ secrets.KOYEB_API_TOKEN }}
