@@ -7,7 +7,7 @@
   ],
   "type": "module",
   "scripts": {
-    "prepare": "lefthook install",
+    "prepare": "lefthook install || echo 'Skipping lefthook'",
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "docker": "docker compose -f ./apps/backend/docker-compose.yml up -d",

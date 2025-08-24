@@ -3,13 +3,25 @@ import 'dotenv/config';
 
 import { z } from 'zod';
 
-const schema = z.object({
-  PORT: z.coerce.number().default(8000),
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+
+const postgreSQLSchema = z.object({
   POSTGRES_USER: z.string(),
   POSTGRES_PASSWORD: z.string(),
   POSTGRES_DB: z.string(),
-  DATABASE_URL: z.url(),
 });
+
+const schema = z
+  .object({
+    PORT: z.coerce.number().default(8000),
+    DATABASE_URL: z.url(),
+    NODE_ENV: z
+      .enum(['development', 'production', 'test'])
+      .default('development'),
+  })
+  .extend(
+    IS_PRODUCTION ? postgreSQLSchema.partial().shape : postgreSQLSchema.shape
+  );
 
 const _env = schema.safeParse(process.env);
 
