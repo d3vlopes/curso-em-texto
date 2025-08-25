@@ -14,13 +14,16 @@ commit-msg:
       run: npx commitlint --edit $1
 
 pre-push:
-  parallel: true
+  parallel: false
   commands:
     test:
       run: npx turbo run test:ci --filter=...[origin/main]
 
     typecheck:
       run: npx turbo run typecheck --filter=...[origin/main]
+
+    build:
+      run: npx turbo run build --filter=...[origin/main]
 
     packages-audit:
       run: npm audit
