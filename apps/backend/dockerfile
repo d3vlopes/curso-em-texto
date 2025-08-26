@@ -21,8 +21,10 @@ WORKDIR /app
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/apps/backend/dist ./dist
 COPY --from=builder /app/apps/backend/package.json ./package.json
+COPY --from=builder /app/apps/backend/drizzle.config.ts ./drizzle.config.ts
+COPY --from=builder /app/apps/backend/drizzle ./drizzle
 
 USER node
 EXPOSE 3000
 
-CMD ["node", "dist/index.js"]
+CMD ["sh", "-c", "npm run db:migrate --config=drizzle.config.ts && node dist/index.js"]
