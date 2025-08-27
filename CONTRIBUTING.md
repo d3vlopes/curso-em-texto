@@ -14,27 +14,11 @@ Descrição e comentários devem ser feitos em português.
 
 ## Issues
 
-Você pode acessar todas as tarefas do projeto acessando a seção [issues](https://github.com/d3vlopes/curso-em-texto/issues).
-
-Cada issue vai ter uma estrutura semelhante a essa:
-
-- [Escopo] - O escopo é uma forma de categorizar a issue. O escopo pode ser por exemplo `Component`, `Page`, `Controller`, `UseCase`.
-- Título - Um pequeno título que descreva o que deve ser feito.
-- Dependências (Opcional) - Se essa issue depender de outras, aqui vai ficar listado as issues dependentes. Isso significa, que para finalizar essa issue, vai ser preciso terminar primeiro as issues dependentes, mas, isso não impede que essa issue possa ser iniciada.
-- Requisitos funcionais - Requisitos relacionados ao usuário.
-- Requisitos não funcionais - Descreve como o sistema deve funcionar.
-- Casos de uso - Casos de uso daquela issue. Por exemplo, deve acontecer X ação ao clicar em Y elemento.
-- Regras de negócio (Opcional) - Se a issue conter alguma regra de negócio ela é especificada aqui.
-- Restrições - Restrições expostas a issue. Por exemplo, pode ser adicionado aqui que aquela issue deve ser desenvolvida utilizando TDD ou que deve ser criado em uma pasta especifica.
-- Checklist - Normalmente o checklist é colocado no final. É um lembrete sobre o que deve ser feito. Por exemplo, cumprir todos os requisitos, buscar oportunidades de melhoria no código.
-
-### Exemplo de issue
-
-<img width="1268" height="908" alt="image" src="https://github.com/user-attachments/assets/f5679820-ee9d-4da1-a2b3-d02488a3f84c" />
+Você pode acessar todas as issues do projeto acessando a seção [issues](https://github.com/d3vlopes/curso-em-texto/issues).
 
 ### Labels
 
-Cada issue pode conter uma ou mais labels. Labels são uma forma de agrupar issue. </br>
+Cada issue pode conter uma ou mais labels. Labels são uma forma de agrupar issue em categorias. </br>
 Aqui está algumas labels que temos:
 
 `feature`: Criação de uma nova funcionalidade </br>
@@ -50,23 +34,50 @@ Aqui está algumas labels que temos:
 
 ### Status
 
-Uma issue, pode conter diferentes status. Uma issue com o status `backlog` ainda foi refinada e não está pronta para ser iniciada. Uma issue com status `ready` já foi refinada e está pronta para ser iniciada imediatamente.
-
-<img width="1266" height="783" alt="Group 6978 1" src="https://github.com/user-attachments/assets/df429d29-c297-4a41-9c99-ad690ec50d3a" />
+Uma issue, pode conter diferentes status. Uma issue com o status `backlog` ainda não foi refinada e não está pronta para ser iniciada. Uma issue com status `ready` já foi refinada e está pronta para ser iniciada.
 
 ## Assumindo uma issue
 
-Antes de pegar uma issue para trabalhar é importante fazer algumas coisas antes:
-
-1. Verifique se a issue não está com alguém. Você pode verificar isso, acessando uma issue e olhando em `assignees`.
-2. Verifique se não existe um [pull request](https://github.com/d3vlopes/curso-em-texto/pulls) relacionado a essa issue.
-3. Verifique se não existe uma branch ativa relacionado a essa issue.
-
-Se existir uma branch que foi atualizado pela última vez há 1 mês, significa que provavelmente a pessoa não esteja mais trabalhando nela. Dessa forma, você pode pode pegar essa issue e continuar o seu trabalho a partir dessa branch ou criar uma do zero. É importante tomar cuidado para não criar muitas branchs duplicadas, sempre que possível continue de uma branch existente.
-
-Ao asumir uma issue, caso `assignees` esteja marcado com outra pessoa, altere para você ou clique em `assign yourself`. </br>
-Ao começar a trabalhar em uma issue altere seu status para `in progress`.
-
-Quando estiver trabalhando em uma issue, é importante que você suba sua branch diariamente com o seu progresso. Dessa forma, sabemos que você está trabalhando nela, caso contrário, outra pessoa poderá assumir a sua issue. Isso é importante para caso, você não consiga terminar, outra pessoa possa continuar o seu trabalho de onde você parou, sem perder o seu progresso. Também serve como uma forma de "backup" do seu trabalho.
+Acesse a issue que você quer trabalhar e adicione um comentário do tipo "vou trabalhar nisso". </br>
+Se você não abrir PR em até 14 dias após assumir a issue, ela será liberada para outra pessoa.
 
 ## Pull Request
+
+Para finalizar uma issue, será necessário fazer um `pull request`. </br>
+Veja abaixo o passo a passo…
+
+1 - Crie uma branch, seguindo esse padrão `<type>/<nome-da-branch>` </br>
+2 - Faça as alterações e sincronize sua branch com upstream, seguindo esses passos: </br>
+2.1 - Faça checkout para a main </br>
+2.2 - Execute `git pull upstream main --rebase` </br>
+2.3 - Faça checkout de volta para sua branch </br>
+2.4 - Execute o comando `git rebase main` na sua branch de trabalho </br>
+3 - Faça push para origin executando `git push origin type/nome-branch` </br>
+4 - Vá para o repositório do projeto e abra um pull request </br>
+
+Pronto! Agora é só esperar a revisão da sua contribuição por outros colaboradores do projeto. Quando tiver mudanças para fazer após a revisão do seu código, basta fazer as alterações necessárias e fazer um novo push, isso ira automaticamente atualizar o PR, você não precisa abrir um novo. </br>
+Quando tudo estiver certo um mantenedor do repositório irá fazer o merge da sua contribuição.
+
+## Code review
+
+Mesmo não sendo um mantenedor do repositório, você também pode revisar os pull requests, apontando erros que encontrou enquanto lia o código ou testava a implementação.
+Se você não tem muita experiência com essa prática, esse documento pode te ajudar. </br>
+[Boas práticas code review](https://goldenrod-pen-c7d.notion.site/Boas-pr-ticas-code-review-5cc604dadb9f4571b2a50ef5ba598045)
+
+## Gerenciamento do projeto
+
+Você pode ter uma visão maior sobre o andamento e gerenciamento do projeto acessando a seção [projects](https://github.com/users/d3vlopes/projects/13)
+
+<img width="1280" height="894" alt="image" src="https://github.com/user-attachments/assets/c514a36a-17a7-48de-ad71-4e1cf956db8e" />
+
+## Testes
+
+Se você pegar uma issue que exiga testes é importante você criar uma boa suite de testes. Se você não tem muita experiência com com testes, recomendo utilizar a extensão para VSCode [Qodo Gen: AI Coding Agent](https://marketplace.visualstudio.com/items?itemName=Codium.codium) para te ajudar a criar os testes.
+
+## Utilize os exemples como referência
+
+Tanto o frontend como o backend contém `examples` para você utilizar como base e entender como tudo se conecta no projeto. Quando for criar um novo recurso utilize eles como referência.
+
+## Discord
+
+Acesse nosso [Discord](https://discord.gg/55e3kf6DPv) para conhecer novas pessoas, pedir ajuda e ficar por dentro da novidades do projeto.
