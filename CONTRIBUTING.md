@@ -1,7 +1,7 @@
 # Contribuindo para o Curso em Texto
 
-Seja muito bem-vindo(a)!
-É incrível ver você querendo contribuir com o Curso em Texto. Gratidão! 😊
+Seja muito bem-vindo(a)! </br>
+Muito obrigado por querer contribuir e compartilhar seu conhecimento! Cada contribuição, por menor que pareça, faz diferença.
 
 Se quiser contribuir, seja com código, documentação ou novas ideias, você está no lugar certo. Aqui está o nosso guia para te ajudar a começar.
 
@@ -12,11 +12,15 @@ Se você tiver alguma sugestão ou quiser reportar um bug, utilize a seção de 
 Antes de criar uma nova discussão, pesquise se o assunto já está sendo abordado.</br>
 Descrição e comentários devem ser feitos em português.
 
+## Configurando o projeto
+
+Se você está procurando como configurar o projeto, acesse nosso [README](https://github.com/d3vlopes/curso-em-texto/blob/README.md)
+
 ## Issues
 
-Você pode acessar todas as issues do projeto acessando a seção [issues](https://github.com/d3vlopes/curso-em-texto/issues).
+Issues são tarefas que devem ser realizadas no projeto. Você pode acessar todas as issues do projeto [clicando aqui](https://github.com/d3vlopes/curso-em-texto/issues).
 
-### Labels
+## Labels
 
 Cada issue pode conter uma ou mais labels. Labels são uma forma de agrupar issue em categorias. </br>
 Aqui está algumas labels que temos:
@@ -32,7 +36,7 @@ Aqui está algumas labels que temos:
 `high`: Prioridade com alta prioridade </br>
 `good first issue`: Tarefa reservada para iniciantes
 
-### Status
+## Status
 
 Uma issue, pode conter diferentes status. Uma issue com o status `backlog` ainda não foi refinada e não está pronta para ser iniciada. Uma issue com status `ready` já foi refinada e está pronta para ser iniciada.
 
@@ -48,9 +52,9 @@ Veja abaixo o passo a passo…
 
 1 - Crie uma branch, seguindo esse padrão `<type>/<nome-da-branch>` </br>
 2 - Faça as alterações e sincronize sua branch com upstream, seguindo esses passos: </br>
-2.1 - Faça checkout para a main </br>
+2.1 - Faça checkout para main executando `git checkout main` </br>
 2.2 - Execute `git pull upstream main --rebase` </br>
-2.3 - Faça checkout de volta para sua branch </br>
+2.3 - Faça checkout de volta para sua branch executando `git checkout -` </br>
 2.4 - Execute o comando `git rebase main` na sua branch de trabalho </br>
 3 - Faça push para origin executando `git push origin type/nome-branch` </br>
 4 - Vá para o repositório do projeto e abra um pull request </br>
