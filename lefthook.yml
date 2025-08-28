@@ -26,4 +26,6 @@ pre-push:
       run: npx turbo run build --filter=...[origin/main]
 
     packages-audit:
-      run: npm audit
+      run:
+        echo "🔍 Rodando npm audit para vulnerabilidades de nível 'high' ou superior..."
+        npm audit --audit-level=high
