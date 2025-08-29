@@ -14,7 +14,7 @@
     "lint": "turbo run lint",
     "format": "turbo run format",
     "test": "turbo run test",
-    "test:unit": "turbo run test:unit",
+    "test:watch": "turbo run test:watch",
     "test:staged": "turbo run test:staged",
     "test:ci": "turbo run test:ci",
     "typecheck": "turbo run typecheck"

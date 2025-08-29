@@ -186,7 +186,7 @@ npm run db:migrate --workspace=backend   # Executar migrações
 
 # Testes
 npm run test --workspace=backend        # Roda todos os testes
-npm run test:unit --workspace=backend   # Roda os testes em modo watch
+npm run test:watch --workspace=backend   # Roda os testes em modo watch
 ```
 
 **Frontend:**
@@ -200,7 +200,7 @@ npm run storybook --workspace=frontend
 
 # Testes
 npm run test --workspace=frontend       # Roda todos os testes unitários
-npm run test:unit --workspace=frontend   # Roda os testes em modo watch
+npm run test:watch --workspace=frontend   # Roda os testes em modo watch
 ```
 
 ## Design
