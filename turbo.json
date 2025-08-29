@@ -10,7 +10,10 @@
       "outputs": ["dist/**", ".next/**"]
     },
     "test": {
-      "outputs": []
+      "dependsOn": ["transit"]
+    },
+    "transit": {
+      "dependsOn": ["^transit"]
     },
     "test:staged": {
       "outputs": []
