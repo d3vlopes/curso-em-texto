@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import type { ExampleModelData } from '@/data/models/Example';
 import type { CreateExampleData } from '@/data/repositories/interfaces/ExampleRepository';
 
@@ -9,6 +10,10 @@ export type CreateExampleRequestType = Omit<
   CreateExampleData,
   'username' | 'createdAt' | 'id'
 >;
+
+interface CreateExampleRequest extends CreateExampleRequestType {
+  example?: string;
+}
 
 type RequiredFields = keyof CreateExampleRequestType;
 
@@ -23,7 +28,9 @@ export class CreateExampleController implements Controller {
   ) {}
 
   async handle(input: unknown) {
-    const request = input as CreateExampleRequestType;
+    const request = input as CreateExampleRequest;
+
+    console.log('request.example =>', request.example);
 
     for (const field of requiredFields) {
       if (!request[field]) {
