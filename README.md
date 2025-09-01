@@ -226,11 +226,11 @@ Você pode visualizar o layout do projeto, [clicando aqui](https://www.figma.com
 
 ## Roadmap
 
-- [ ] **Sistema de autenticação** - Atual
+- [ ] **Sistema de autenticação** - **Atual**
   - Cadastro e login de usuários.
   - Integração com OAuth (Google e GitHub).
   - Rules.
-- [ ] **Criação de cursos** - Atual
+- [ ] **Criação de cursos** - **Atual**
   - CRUD de cursos (título, descrição, tags).
   - Editor de conteúdo em texto.
   - Organização em capítulos e lições.
