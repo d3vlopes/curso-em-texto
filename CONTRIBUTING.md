@@ -41,8 +41,9 @@ Aqui está algumas labels que temos:
 
 Uma issue, pode conter diferentes status. Uma issue com o status `backlog` ainda não foi refinada e não está pronta para ser iniciada. Uma issue com status `ready` já foi refinada e está pronta para ser iniciada.
 
-## Dependências 
-Uma issue pode ter dependência de outras issues, isso significa que não vai ser possível finalizar essa issue, antes de ser feito o merge das issues dependentes. Mas, isso não impede que essa issue possa ser iniciada, para você já ir adiantando e aprendendo sobre a base de código, enquanto as dependências são implementadas, depois você só precisa puxar e configurar as dependências na sua issue.
+## Dependências
+
+Uma issue pode depender de outras. Nesses casos, ela só poderá ser finalizada após o merge de suas dependências. No entanto, você pode começar a trabalhar nela para adiantar o desenvolvimento e se familiarizar com o código. Quando as dependências forem implementadas, basta atualizar sua branch e integrar as mudanças.
 
 ## Assumindo uma issue
 
