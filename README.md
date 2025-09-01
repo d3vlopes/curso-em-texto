@@ -48,6 +48,8 @@ Acreditamos que toda pessoa tem algo de valioso para **ensinar** e algo novo par
 - [Storybook](https://storybook.js.org)
 - [Vitest](https://vitest.dev)
 - [Zod](https://zod.dev)
+- [Swagger](https://swagger.io)
+- [Scalar](https://scalar.com)
 
 ## Começando
 
@@ -224,17 +226,17 @@ Você pode visualizar o layout do projeto, [clicando aqui](https://www.figma.com
 
 ## Roadmap
 
-- [ ] **Sistema de autenticação**
+- [ ] **Sistema de autenticação** - **Atual**
   - Cadastro e login de usuários.
   - Integração com OAuth (Google e GitHub).
   - Rules.
-- [ ] **Perfil de usuário**
-  - Informações básicas (nome, bio, redes sociais).
-  - Avatar do usuário.
-- [ ] **Criação de cursos**
+- [ ] **Criação de cursos** - **Atual**
   - CRUD de cursos (título, descrição, tags).
   - Editor de conteúdo em texto.
   - Organização em capítulos e lições.
+- [ ] **Perfil de usuário**
+  - Informações básicas (nome, bio, redes sociais).
+  - Avatar do usuário.
 - [ ] **Sistema de curadoria de cursos**
   - Aprovação e bloqueio de cursos.
   - Destaque de cursos recomendados.
