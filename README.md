@@ -226,35 +226,39 @@ Você pode visualizar o layout do projeto, [clicando aqui](https://www.figma.com
 
 ## Roadmap
 
-- [ ] [Sistema de autenticação](https://github.com/d3vlopes/curso-em-texto/milestone/1) - **Em desenvolvimento**
+### Em desenvolvimento
+
+- [ ] [Sistema de autenticação](https://github.com/d3vlopes/curso-em-texto/milestone/1)
   - Cadastro e login de usuários.
   - Integração com OAuth (Google e GitHub).
   - Rules.
-- [ ] [Criação de cursos](https://github.com/d3vlopes/curso-em-texto/milestone/3) - **Em desenvolvimento**
+- [ ] [Criação de cursos](https://github.com/d3vlopes/curso-em-texto/milestone/3)
   - CRUD de cursos (título, descrição, tags).
   - Editor de conteúdo em texto.
   - Organização em capítulos e lições.
-- [ ] **Perfil de usuário** - **Planejado**
+     
+  ### Planejado 
+- [ ] **Perfil de usuário**
   - Informações básicas (nome, bio, redes sociais).
   - Avatar do usuário.
-- [ ] **Sistema de curadoria de cursos** - **Planejado**
+- [ ] **Sistema de curadoria de cursos**
   - Aprovação e bloqueio de cursos.
   - Destaque de cursos recomendados.
-- [ ] **Sistema de denúncias** - **Planejado**
+- [ ] **Sistema de denúncias**
   - Denúncia de conteúdo inadequado.
   - Revisão de denúncias pela equipe.
-- [ ] **Sistema de anotações** - **Planejado**
+- [ ] **Sistema de anotações**
   - Usuário pode criar notas pessoais dentro das lições.
-- [ ] **Sistema de favoritos** - **Planejado**
+- [ ] **Sistema de favoritos**
   - Salvar cursos/lessons para ver depois.
-- [ ] **Busca avançada** - **Planejado**
+- [ ] **Busca avançada**
   - Busca por cursos, lições e autores.
-- [ ] **Gamificação** - **Planejado**
+- [ ] **Gamificação**
   - Sistema de pontos/reputação para autores.
   - Badges para contribuidores ativos.
-- [ ] **Sistema de recompensa para criadores de cursos** - **Planejado**
+- [ ] **Sistema de recompensa para criadores de cursos**
   - Troca de pontos por recompensas.
-- [ ] **Comentários e feedback** - **Planejado**
+- [ ] **Comentários e feedback**
   - Espaço de comentários em cursos e lições.
   - Votação em comentários (upvote/downvote).
 
