@@ -34,4 +34,8 @@ export class UserRepositoryStub implements UserRepository {
   create(_: CreateUserData): Promise<UserModelData> {
     return Promise.resolve(userGoogleProviderMock);
   }
+
+  async findByEmail(email: string): Promise<UserModelData | null> {
+    return usersMock.find((user) => user.email === email) || null;
+  }
 }

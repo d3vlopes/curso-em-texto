@@ -1,3 +1,5 @@
+import { eq } from 'drizzle-orm';
+
 import type { UserModelData } from '@/data/models/User';
 import type {
   CreateUserData,
@@ -11,5 +13,14 @@ export class UserRepositoryImp implements UserRepository {
     const [result] = await db.insert(usersTable).values(data).returning();
 
     return result;
+  }
+
+  async findByEmail(email: string): Promise<UserModelData | null> {
+    const [result] = await db
+      .select()
+      .from(usersTable)
+      .where(eq(usersTable.email, email));
+
+    return result || null;
   }
 }
