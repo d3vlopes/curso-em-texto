@@ -29,6 +29,7 @@
     "@curso-em-texto/eslint-config": "*",
     "@curso-em-texto/prettier-config": "*",
     "@curso-em-texto/vitest-config": "*",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.3.0",
     "@types/pg": "^8.15.5",
     "tsup": "^8.5.0",
@@ -45,6 +46,7 @@
     "drizzle-kit": "^0.31.4",
     "drizzle-orm": "^0.44.4",
     "fastify": "^5.5.0",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.16.3",
     "zod": "^4.0.17"
   }
