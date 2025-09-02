@@ -18,6 +18,7 @@ const schema = z
     NODE_ENV: z
       .enum(['development', 'production', 'test'])
       .default('development'),
+    JWT_SECRET: z.string().min(1),
   })
   .extend(
     IS_PRODUCTION ? postgreSQLSchema.partial().shape : postgreSQLSchema.shape
