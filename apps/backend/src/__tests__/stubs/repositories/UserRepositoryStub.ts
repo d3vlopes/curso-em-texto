@@ -38,4 +38,8 @@ export class UserRepositoryStub implements UserRepository {
   async findByEmail(email: string): Promise<UserModelData | null> {
     return usersMock.find((user) => user.email === email) || null;
   }
+
+  async update(_: string, __: Partial<UserModelData>): Promise<UserModelData> {
+    return Promise.resolve(userGoogleProviderMock);
+  }
 }

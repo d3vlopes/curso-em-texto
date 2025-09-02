@@ -23,4 +23,17 @@ export class UserRepositoryImp implements UserRepository {
 
     return result || null;
   }
+
+  async update(
+    id: string,
+    data: Partial<UserModelData>
+  ): Promise<UserModelData> {
+    const [result] = await db
+      .update(usersTable)
+      .set({ ...data, updatedAt: new Date() })
+      .where(eq(usersTable.id, id))
+      .returning();
+
+    return result;
+  }
 }
