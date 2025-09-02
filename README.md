@@ -226,14 +226,18 @@ Você pode visualizar o layout do projeto, [clicando aqui](https://www.figma.com
 
 ## Roadmap
 
-- [ ] **Sistema de autenticação** - **Atual**
+### Em desenvolvimento
+
+- [ ] [Sistema de autenticação](https://github.com/d3vlopes/curso-em-texto/milestone/1)
   - Cadastro e login de usuários.
   - Integração com OAuth (Google e GitHub).
   - Rules.
-- [ ] **Criação de cursos** - **Atual**
+- [ ] [Criação de cursos](https://github.com/d3vlopes/curso-em-texto/milestone/3)
   - CRUD de cursos (título, descrição, tags).
   - Editor de conteúdo em texto.
   - Organização em capítulos e lições.
+     
+  ### Planejado 
 - [ ] **Perfil de usuário**
   - Informações básicas (nome, bio, redes sociais).
   - Avatar do usuário.
