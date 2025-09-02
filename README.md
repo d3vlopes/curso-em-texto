@@ -226,35 +226,35 @@ Você pode visualizar o layout do projeto, [clicando aqui](https://www.figma.com
 
 ## Roadmap
 
-- [ ] **Sistema de autenticação** - **Atual**
+- [ ] [Sistema de autenticação](https://github.com/d3vlopes/curso-em-texto/milestone/1) - **Em desenvolvimento**
   - Cadastro e login de usuários.
   - Integração com OAuth (Google e GitHub).
   - Rules.
-- [ ] **Criação de cursos** - **Atual**
+- [ ] [Criação de cursos](https://github.com/d3vlopes/curso-em-texto/milestone/3) - **Em desenvolvimento**
   - CRUD de cursos (título, descrição, tags).
   - Editor de conteúdo em texto.
   - Organização em capítulos e lições.
-- [ ] **Perfil de usuário**
+- [ ] **Perfil de usuário** - **Planejado**
   - Informações básicas (nome, bio, redes sociais).
   - Avatar do usuário.
-- [ ] **Sistema de curadoria de cursos**
+- [ ] **Sistema de curadoria de cursos** - **Planejado**
   - Aprovação e bloqueio de cursos.
   - Destaque de cursos recomendados.
-- [ ] **Sistema de denúncias**
+- [ ] **Sistema de denúncias** - **Planejado**
   - Denúncia de conteúdo inadequado.
   - Revisão de denúncias pela equipe.
-- [ ] **Sistema de anotações**
+- [ ] **Sistema de anotações** - **Planejado**
   - Usuário pode criar notas pessoais dentro das lições.
-- [ ] **Sistema de favoritos**
+- [ ] **Sistema de favoritos** - **Planejado**
   - Salvar cursos/lessons para ver depois.
-- [ ] **Busca avançada**
+- [ ] **Busca avançada** - **Planejado**
   - Busca por cursos, lições e autores.
-- [ ] **Gamificação**
+- [ ] **Gamificação** - **Planejado**
   - Sistema de pontos/reputação para autores.
   - Badges para contribuidores ativos.
-- [ ] **Sistema de recompensa para criadores de cursos**
+- [ ] **Sistema de recompensa para criadores de cursos** - **Planejado**
   - Troca de pontos por recompensas.
-- [ ] **Comentários e feedback**
+- [ ] **Comentários e feedback** - **Planejado**
   - Espaço de comentários em cursos e lições.
   - Votação em comentários (upvote/downvote).
 
