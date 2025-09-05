@@ -11,6 +11,9 @@ export const ExampleTemplate = ({ heading, example }: ExampleTemplateProps) => {
       <h1 className="font-bold text-5xl text-gradient-primary">{heading}</h1>
 
       <Example {...example} />
+
+      <a href="http://localhost:8000/api/auth/google">Login com Google</a>
+      <br></br>
     </div>
   );
 };
