@@ -19,6 +19,12 @@ const schema = z
       .enum(['development', 'production', 'test'])
       .default('development'),
     JWT_SECRET: z.string().min(1),
+    GOOGLE_CLIENT_ID: z.string(),
+    GOOGLE_CLIENT_SECRET: z.string(),
+    GITHUB_CLIENT_ID: z.string(),
+    GITHUB_CLIENT_SECRET: z.string(),
+    API_BASE_URL: z.string().min(1),
+    FRONTEND_URL: z.string().min(1),
   })
   .extend(
     IS_PRODUCTION ? postgreSQLSchema.partial().shape : postgreSQLSchema.shape

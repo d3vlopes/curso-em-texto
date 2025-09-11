@@ -8,13 +8,19 @@ export const adaptRoute = (controller: Controller) => {
       ...(req.body || {}),
       params: { ...(req.params || {}) },
       query: { ...(req.query || {}) },
+      cookies: req.cookies,
       example: req.example,
       userId: req.userId,
     };
 
     const httpResponse = await controller.handle(request);
 
-    if (httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299) {
+    if (httpResponse.redirect) {
+      return res.redirect(httpResponse.redirect.url, httpResponse.statusCode);
+    } else if (
+      httpResponse.statusCode >= 200 &&
+      httpResponse.statusCode <= 299
+    ) {
       res.status(httpResponse.statusCode).send(httpResponse.body);
     } else {
       res.status(httpResponse.statusCode).send({
