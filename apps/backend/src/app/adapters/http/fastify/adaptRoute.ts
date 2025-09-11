@@ -8,6 +8,7 @@ export const adaptRoute = (controller: Controller) => {
       ...(req.body || {}),
       params: { ...(req.params || {}) },
       query: { ...(req.query || {}) },
+      cookies: req.cookies,
       example: req.example,
       userId: req.userId,
     };
