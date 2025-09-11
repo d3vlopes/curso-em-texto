@@ -32,9 +32,3 @@ export const authMiddleware = (
 
   return res.status(200).send({ payload: decoded });
 };
-
-declare module 'fastify' {
-  interface FastifyRequest {
-    userId?: string;
-  }
-}
