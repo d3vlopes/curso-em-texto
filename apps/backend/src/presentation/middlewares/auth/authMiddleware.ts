@@ -9,29 +9,32 @@ export const authMiddleware = (
   const authorization = req.headers.authorization;
 
   if (!authorization) {
-    return res.status(401).send({ error: 'Token não fornecido' });
+    return res.status(401).send({ error: 'Token not provided' });
   }
 
-  if (!authorization.startsWith('Bearer ')) {
-    return res.status(401).send({ error: 'Token inválido' });
+  const tokenParts = authorization.split(' ');
+
+  if (tokenParts.length !== 2 || tokenParts[0] !== 'Bearer') {
+    return res.status(401).send({ error: 'Invalid token format' });
   }
 
-  const token = authorization.split(' ')[1];
-  try {
-    const decoded = new JWTAdapter().verifyToken(token);
+  const token = tokenParts[1];
 
-    req.user = decoded?.userId;
+  const decoded = new JWTAdapter().verifyToken(token);
 
-    next();
-
-    return res.status(200).send({ payload: decoded });
-  } catch (error) {
-    return res.status(401).send({ error });
+  if (!decoded) {
+    return res.status(401).send({ error: 'Invalid token' });
   }
+
+  req.userId = decoded.userId;
+
+  next();
+
+  return res.status(200).send({ payload: decoded });
 };
 
 declare module 'fastify' {
   interface FastifyRequest {
-    user?: string;
+    userId?: string;
   }
 }
