@@ -29,6 +29,4 @@ export const authMiddleware = (
   req.userId = decoded.userId;
 
   next();
-
-  return res.status(200).send({ payload: decoded });
 };
