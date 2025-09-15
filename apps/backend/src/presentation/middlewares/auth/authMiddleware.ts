@@ -20,15 +20,17 @@ export const authMiddleware = (
 
   const token = tokenParts[1];
 
-  const decoded = new JWTAdapter().verifyToken(token);
+  try {
+    const decoded = new JWTAdapter().verifyToken(token);
 
-  if (!decoded) {
-    return res.status(401).send({ error: 'Invalid token' });
+    if (!decoded) {
+      return res.status(401).send({ error: 'Invalid token' });
+    }
+
+    req.userId = decoded.userId;
+
+    next();
+  } catch {
+    return res.status(401).send({ error: 'Unauthorized' });
   }
-
-  req.userId = decoded.userId;
-
-  next();
-
-  return res.status(200).send({ payload: decoded });
 };
