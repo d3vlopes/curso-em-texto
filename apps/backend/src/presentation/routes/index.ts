@@ -4,4 +4,5 @@ import * as routes from './modules/_barrel';
 
 export const apiRoutes: FastifyPluginAsync = async (app) => {
   app.register(routes.exampleRoutes);
+  app.register(routes.authRoutes);
 };
