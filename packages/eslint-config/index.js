@@ -3,9 +3,11 @@ import ts from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import prettier from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
+import turboConfig from 'eslint-config-turbo/flat';
 
 /** @type {import("eslint").Linter.Config} */
 export default [
+  ...turboConfig,
   {
     ignores: ['node_modules', 'dist', '.next', 'coverage'],
   },
@@ -37,6 +39,12 @@ export default [
         { argsIgnorePattern: '^_' },
       ],
       '@typescript-eslint/no-non-null-assertion': 'warn',
+      'turbo/no-undeclared-env-vars': [
+        'error',
+        {
+          allowList: ['NODE_ENV']
+        },
+      ],
     },
   },
 ];
