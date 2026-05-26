@@ -1,23 +1,13 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 import storybook from 'eslint-plugin-storybook';
-import { FlatCompat } from '@eslint/eslintrc';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
+import nextTypescript from 'eslint-config-next/typescript';
 
 import baseConfig from '@curso-em-texto/eslint-config';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
 const eslintConfig = [
   ...baseConfig,
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
   {
     ignores: [
       'node_modules/**',
@@ -28,18 +18,6 @@ const eslintConfig = [
     ],
   },
   {
-    plugins: {
-      react,
-      'jsx-a11y': jsxA11y,
-      'react-hooks': reactHooks,
-    },
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
