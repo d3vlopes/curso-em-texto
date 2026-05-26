@@ -3,19 +3,20 @@ import { JWTAdapter } from '@/app/adapters/jwt';
 
 export const authMiddleware = (
   req: FastifyRequest,
-  res: FastifyReply,
-  next: () => void
+  res: FastifyReply
 ) => {
   const authorization = req.headers.authorization;
 
   if (!authorization) {
-    return res.status(401).send({ error: 'Token not provided' });
+    res.status(401).send({ error: 'Token not provided' });
+    return;
   }
 
   const tokenParts = authorization.split(' ');
 
   if (tokenParts.length !== 2 || tokenParts[0] !== 'Bearer') {
-    return res.status(401).send({ error: 'Invalid token format' });
+    res.status(401).send({ error: 'Invalid token format' });
+    return;
   }
 
   const token = tokenParts[1];
@@ -24,13 +25,12 @@ export const authMiddleware = (
     const decoded = new JWTAdapter().verifyToken(token);
 
     if (!decoded) {
-      return res.status(401).send({ error: 'Invalid token' });
+      res.status(401).send({ error: 'Invalid token' });
+      return;
     }
 
     req.userId = decoded.userId;
-
-    next();
   } catch {
-    return res.status(401).send({ error: 'Unauthorized' });
+    res.status(401).send({ error: 'Unauthorized' });
   }
 };
