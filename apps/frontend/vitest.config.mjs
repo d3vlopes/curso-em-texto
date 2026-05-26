@@ -10,7 +10,7 @@ export default mergeConfig(
     plugins: [tsconfigPaths(), react()],
     test: {
       ...baseConfig.test,
-      exclude: ['__tests__/mocks/*'],
+      exclude: ['node_modules', 'dist', '__tests__/mocks/*'],
       environment: 'jsdom',
       setupFiles: './vitest.setup.ts',
       coverage: {
