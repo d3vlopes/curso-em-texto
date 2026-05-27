@@ -68,7 +68,7 @@ Acreditamos que toda pessoa tem algo de valioso para **ensinar** e algo novo par
 1. **Adicione o repositório original como upstream:**
 
    ```bash
-   git remote add upstream https://github.com/union-developers-group/curso-em-texto
+   git remote add upstream https://github.com/union-developers-group/curso-em-texto.git
    ```
 
 2. **Verifique os remotes configurados:**
