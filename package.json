@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "prepare": "lefthook install || echo 'Skipping lefthook'",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
     "build": "turbo run build",
     "docker": "docker compose -f ./apps/backend/docker-compose.yml --env-file ./apps/backend/.env up -d",
     "lint": "turbo run lint",
