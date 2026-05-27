@@ -1,10 +1,7 @@
 import type { FastifyReply, FastifyRequest } from 'fastify';
 import { JWTAdapter } from '@/app/adapters/jwt';
 
-export const authMiddleware = (
-  req: FastifyRequest,
-  res: FastifyReply
-) => {
+export const authMiddleware = (req: FastifyRequest, res: FastifyReply) => {
   const authorization = req.headers.authorization;
 
   if (!authorization) {

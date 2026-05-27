@@ -8,7 +8,7 @@
     "build": "tsup src/app/index.ts --format esm,cjs --dts",
     "start": "NODE_ENV=production node dist/index.js",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format": "prettier --write --ignore-unknown --log-level=warn",
     "db:generate": "npx drizzle-kit generate",
     "db:migrate": "npx drizzle-kit migrate",
     "db:studio": "npx drizzle-kit studio",
