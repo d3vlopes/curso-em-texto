@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "storybook": "storybook dev -p 6006",
