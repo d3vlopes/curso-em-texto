@@ -3,8 +3,10 @@ pre-commit:
   commands:
     linter:
       run: npx turbo run lint --output-logs=errors-only --filter=...[HEAD]
+      stage_fixed: true
     format:
       run: npx turbo run format --output-logs=errors-only --filter=...[HEAD]
+      stage_fixed: true
     test:
       run: npx turbo run test:staged --filter=...[HEAD]
 
@@ -21,9 +23,6 @@ pre-push:
 
     typecheck:
       run: npx turbo run typecheck --filter=...[origin/main]
-
-    build:
-      run: npx turbo run build --filter=...[origin/main]
 
     packages-audit:
       run:
